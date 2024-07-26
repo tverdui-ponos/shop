@@ -9,9 +9,11 @@ write_otz = types.KeyboardButton(text="📝 Написать отзыв")
 moder = types.KeyboardButton(text="📞 Оператор")
 menu_markup.add(buy, otz, write_otz, moder)
 
-with open("wallet.txt", "r") as file1:
-    for line in file1:
-        bitcoin = line.strip()
+#with open("wallet.txt", "r") as file1:
+#    for line in file1:
+#        bitcoin = line.strip()
+
+bitcoin
 
 quantity = 0
 price = 0
