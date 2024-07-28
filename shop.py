@@ -45,7 +45,7 @@ bot = telebot.TeleBot('6522202616:AAHNx-jS_LiZyWdimmWkGOFkE6QZ4xMWTIM')
 @bot.message_handler(commands = ['start'])
 def menu(message):
 
-    bot.send_message(message.from_user.id, "Дᵒбᵖᵒ пᵒжᵃлᵒᵇᵃть! \n\nY ʜᴀᴄ бᴏльᴡᴏй ᴀᴄᴄᴏᴘтиMᴇʜт, 2 гᴏᴘᴏда ʙ ʜᴀличии, бᴏлᴇᴇ 1000 ʏᴄпᴇᴡʜыx ᴄдᴇлᴏᴋ \n\n𝕄ы ℍ𝕖д𝕒𝕓ℍ𝕠 ℍ𝕒 𝕡ыℍ𝕜𝕖, п𝕠эт𝕠𝕄𝕪 𝕪 ℍ𝕒𝕔 𝕠дℍи из 𝕔𝕒𝕄ы𝕩 ℍиз𝕜и𝕩 ц𝕖ℍ\n\nY ʜᴀᴄ ᴘᴀбᴏтᴀют тᴏльᴋᴏ пᴘᴏȹи ᴋᴏтᴏᴘыᴇ лᴏжᴀт ʙᴄё ʙ дᴏᴄтʏпʜыᴇ и ʙ тᴏжᴇ ʙᴘᴇMя бᴇзᴏпᴀᴄтʜыᴇ Mᴇᴄтᴀ")
+    bot.send_message(message.from_user.id, "Дᵒбᵖᵒ пᵒжᵃлᵒᵇᵃть! \n\nY ʜᴀᴄ бᴏльᴡᴏй ᴀᴄᴄᴏᴘтиMᴇʜт, 3 гᴏᴘᴏда ʙ ʜᴀличии, десятки довольных клиентов \n\n𝕄ы ℍ𝕖д𝕒𝕓ℍ𝕠 ℍ𝕒 𝕡ыℍ𝕜𝕖, п𝕠эт𝕠𝕄𝕪 𝕪 ℍ𝕒𝕔 𝕠дℍи из 𝕔𝕒𝕄ы𝕩 ℍиз𝕜и𝕩 ц𝕖ℍ\n\nY ʜᴀᴄ ᴘᴀбᴏтᴀют тᴏльᴋᴏ пᴘᴏȹи ᴋᴏтᴏᴘыᴇ лᴏжᴀт ʙᴄё ʙ дᴏᴄтʏпʜыᴇ и ʙ тᴏжᴇ ʙᴘᴇMя бᴇзᴏпᴀᴄтʜыᴇ Mᴇᴄтᴀ")
     bot.send_message(message.from_user.id, "Выберите пункт меню", reply_markup = menu_markup)
 @bot.message_handler(content_types=["text"])
 def text(message):
