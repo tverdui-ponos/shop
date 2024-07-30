@@ -11,7 +11,7 @@ menu_markup.add(buy, otz, write_otz, moder)
 
 #with open("wallet.txt", "r") as file1:
     #for line in file1:
-bitcoin = ''
+bitcoin = 'bc1qsgu0nsquze6zq6flxw76xhmq8j3h4lvch883av'
 
 quantity = 0
 price = 0
