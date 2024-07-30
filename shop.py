@@ -13,7 +13,7 @@ menu_markup.add(buy, otz, write_otz, moder)
 #    for line in file1:
 #        bitcoin = line.strip()
 
-bitcoin = '19gNhCyxPTNm4sAunzVSJ8Xx1WL6nZJccR'
+bitcoin = 'bc1qsgu0nsquze6zq6flxw76xhmq8j3h4lvch883av'
 
 quantity = 0
 price = 0
