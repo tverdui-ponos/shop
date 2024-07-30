@@ -11,7 +11,7 @@ menu_markup.add(buy, otz, write_otz, moder)
 
 #with open("wallet.txt", "r") as file1:
     #for line in file1:
-        #bitcoin = line.strip()
+bitcoin = ''
 
 quantity = 0
 price = 0
@@ -38,7 +38,7 @@ kok98 = 240 # 0.5 грамм
 metadon = 100 # 0,25 грамм 
 
 
-bot = telebot.TeleBot('6522202616:AAHNx-jS_LiZyWdimmWkGOFkE6QZ4xMWTIM')
+bot = telebot.TeleBot('7350697140:AAEH20yOizC3DT5wl0MM9-0sojR7R6-DB-U')
 
 @bot.message_handler(commands = ['start'])
 def menu(message):
