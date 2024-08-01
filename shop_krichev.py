@@ -59,9 +59,9 @@ def text(message):
         markup_inline.add(kricev)
         bot.send_message(message.chat.id, 'Выберите город', reply_markup=markup_inline)
     elif message.text == "📋 Отзывы":
-        bot.send_message(message.from_user.id, "Канал с отзывами\nhttps://t.me/+t3LTVJXoqXlmNGJl")
+        bot.send_message(message.from_user.id, "Канал с отзывами\nhttps://t.me/+UJM8kILJpn9hMjc1")
     elif message.text == "📝 Написать отзыв":
-        bot.send_message(message.from_user.id, "Написать отзыв\nhttps://t.me/heisenbergshopreviewsbot")
+        bot.send_message(message.from_user.id, "Написать отзыв\n@otziv_228_bot")
     elif message.text == "📞 Оператор":
         bot.send_message(message.from_user.id, "По всем вопросом обращаться к оператору @timuroperator228")
     elif message.text == "Отменить заказ":
