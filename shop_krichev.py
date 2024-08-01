@@ -38,7 +38,7 @@ kok98 = 240 # 0.5 грамм
 metadon = 100 # 0,25 грамм 
 
 
-bot = telebot.TeleBot('6522202616:AAHNx-jS_LiZyWdimmWkGOFkE6QZ4xMWTIM')
+bot = telebot.TeleBot('7406565684:AAGP0weXMHZWqKo2ggP1h43RX5Ls7n6Afkk')
 
 @bot.message_handler(commands = ['start'])
 def menu(message):
