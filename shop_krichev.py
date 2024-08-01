@@ -11,7 +11,7 @@ menu_markup.add(buy, otz, write_otz, moder)
 
 #with open("wallet.txt", "r") as file1:
     #for line in file1:
-bitcoin = 'bc1qsgu0nsquze6zq6flxw76xhmq8j3h4lvch883av'
+        #bitcoin = line.strip()
 
 quantity = 0
 price = 0
@@ -25,7 +25,7 @@ delete = ''
 
 def pattern(quantity, price):
     global offer
-    offer = f"Кол-во {quantity} грамм. Цена: {price} BYN"
+    offer = f"Кол-во {quantity} грамм. Цена: {int(price)} BYN"
     return types.KeyboardButton(text = offer)
 
 alpha = 65 # 0.5 грамм
@@ -38,7 +38,7 @@ kok98 = 240 # 0.5 грамм
 metadon = 100 # 0,25 грамм 
 
 
-bot = telebot.TeleBot('7350697140:AAEH20yOizC3DT5wl0MM9-0sojR7R6-DB-U')
+bot = telebot.TeleBot('6522202616:AAHNx-jS_LiZyWdimmWkGOFkE6QZ4xMWTIM')
 
 @bot.message_handler(commands = ['start'])
 def menu(message):
@@ -121,7 +121,7 @@ def order(message):
     markup_inline.add(operator)
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     markup.add(delete)
-    bot.send_message(message.from_user.id, f"✔ОФОРМЛЕНИЕ ЗАКАЗА✔\n\n📍Город: {city}\n📬Примерный адрес: {region}\n🛒Выбраный товар: {tovar}\n📌Выбранное количество: {quantity} \n💳Цена: {price}\n⚠ПЕРЕД ОПЛАТОЙ УДОСТОВЕРЬТЕСЬ ЧТО ВСЕ ДАННЫЕ УКАЗАНЫ ВЕРНО⚠\nПлатежный метод - 🉑Bitcoin(BTC) \n\nПереведите {price} all на реквизиты:\n\n{bitcoin}\n\n", reply_markup=markup)
+    bot.send_message(message.from_user.id, f"✔ОФОРМЛЕНИЕ ЗАКАЗА✔\n\n📍Город: {city}\n📬Примерный адрес: {region}\n🛒Выбраный товар: {tovar}\n📌Выбранное количество: {quantity} \n💳Цена: {int(price)}\n⚠ПЕРЕД ОПЛАТОЙ УДОСТОВЕРЬТЕСЬ ЧТО ВСЕ ДАННЫЕ УКАЗАНЫ ВЕРНО⚠\nПлатежный метод - 🉑Bitcoin(BTC) \n\nПереведите {price} all на реквизиты:\n\n{bitcoin}\n\n", reply_markup=markup)
     time.sleep(1)
     bot.send_message(message.from_user.id, 'ПОСЛЕ ОПЛАТЫ СВЯЖИТЕСЬ С ОПЕРАТОРОМ И ОТПРАВЬТЕ ЕМУ ЧЕК', reply_markup = markup_inline)
     time.sleep(1)
