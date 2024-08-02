@@ -139,7 +139,7 @@ def callback_inline(call):
     if call.message:
         if call.data == "kricev":
             city = "Кричев"
-            msg = bot.edit_message_text(chat_id=call.message.chat.id, message_id=call.message.message_id, text=f"Город: {city}\n\n📍 1.Укажите свой примерный адрес. Например район, улица или станция метро\n\n📬2.Адрес пишется в свободной форме (БЕЗ ОШИБОК!).")
+            msg = bot.edit_message_text(chat_id=call.message.chat.id, message_id=call.message.message_id, text=f"Город: {city}\n\n📍 1.Укажите свой примерный адрес. Например микрорайон, улица или деревня\n\n📬2.Адрес пишется в свободной форме (БЕЗ ОШИБОК!).")
             bot.register_next_step_handler(msg, input_message) 
  
 def input_message(message):
