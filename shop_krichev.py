@@ -19,7 +19,7 @@ price = 0
 product = False
 offer = ''
 
-chanel_id = -1002151212470
+chanel_id = -1002249842098
 
 delete = ''
 
