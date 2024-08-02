@@ -116,7 +116,7 @@ def text(message):
         
 def order(message):
 	if message.text != "Отменить заказ":
-		x = message.text
+      x = message.text
     		lst = x.split()
     		quantity = float(lst[1])
     		price = float(lst[4])
