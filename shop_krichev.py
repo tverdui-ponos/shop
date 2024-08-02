@@ -66,7 +66,7 @@ def text(message):
     elif message.text == "📝 Написать отзыв":
         bot.send_message(message.from_user.id, "Написать отзыв\n@otziv_228_bot")
     elif message.text == "📞 Оператор":
-        bot.send_message(message.from_user.id, "По всем вопросом обращаться к оператору @timuroperator228")
+        bot.send_message(message.from_user.id, "По всем вопросом обращаться к оператору @timuroperator")
     elif message.text == "Отменить заказ":
         bot.send_message(message.from_user.id, "Заказ отменен", reply_markup = menu_markup)
         product = False
