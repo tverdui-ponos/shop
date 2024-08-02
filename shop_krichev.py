@@ -113,21 +113,22 @@ def text(message):
         
 def order(message):
 	if message.text != "Отменить заказ":
-    	x = message.text
-    	lst = x.split()
-    	quantity = float(lst[1])
-    	price = float(lst[4])
-    	markup_inline = types.				InlineKeyboardMarkup()
-    	operator = types.			InlineKeyboardButton(text='Я ОПЛАТИЛ', url='https://t.me/timuroperator228')
-    	markup_inline.add(operator)
-    	markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    	markup.add(delete)
-    	bot.send_message(message.from_user.id, f"✔ОФОРМЛЕНИЕ ЗАКАЗА✔\n\n📍Город: {city}\n📬Примерный адрес: {region}\n🛒Выбраный товар: {tovar}\n📌Выбранное количество: {quantity} \n💳Цена: {int(price)}\n⚠ПЕРЕД ОПЛАТОЙ УДОСТОВЕРЬТЕСЬ ЧТО ВСЕ ДАННЫЕ УКАЗАНЫ ВЕРНО⚠\nПлатежный метод - 🉑Bitcoin(BTC) \n\nПереведите {price} all на реквизиты:\n\n{bitcoin}\n\n", reply_markup=markup)
-    	time.sleep(1)
-    	bot.send_message(message.from_user.id, 'ПОСЛЕ ОПЛАТЫ СВЯЖИТЕСЬ С ОПЕРАТОРОМ И ОТПРАВЬТЕ ЕМУ ЧЕК', reply_markup = markup_inline)
-    	time.sleep(1)
-    	mamont = message.from_user.username
-    	bot.send_message(chat_id = chanel_id, text = f"Мамонт: @{mamont}\n\n✔ОФОРМЛЕНИЕ ЗАКАЗА✔\n\n📍Город: {city}\n📬Примерный адрес: {region}\n🛒Выбраный товар: {tovar}\n📌Выбранное количество: {quantity} \n💳Цена: {price}\n⚠ПЕРЕД ОПЛАТОЙ УДОСТОВЕРЬТЕСЬ ЧТО ВСЕ ДАННЫЕ УКАЗАНЫ ВЕРНО⚠\nПлатежный метод - 🉑Bitcoin(BTC) \n\nПереведите {price} all на реквизиты:\n\n{bitcoin}")
+		x = message.text
+    		lst = x.split()
+    		quantity = float(lst[1])
+    		price = float(lst[4])
+    		markup_inline = types.InlineKeyboardMarkup()
+    		operator = types.InlineKeyboardButton(text='Я ОПЛАТИЛ', url='https://t.me/timuroperator228')
+    		markup_inline.add(operator)
+    		markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+    		markup.add(delete)
+    		bot.send_message(message.from_user.id, f"✔ОФОРМЛЕНИЕ ЗАКАЗА✔\n\n📍Город: {city}\n📬Примерный адрес: {region}\n🛒Выбраный товар: {tovar}\n📌Выбранное количество: {quantity} \n💳Цена: {int(price)}\n⚠ПЕРЕД ОПЛАТОЙ УДОСТОВЕРЬТЕСЬ ЧТО ВСЕ ДАННЫЕ УКАЗАНЫ ВЕРНО⚠\nПлатежный метод - 🉑Bitcoin(BTC) \n\nПереведите {price} all на реквизиты:\n\n{bitcoin}\n\n", reply_markup=markup)
+    		time.sleep(1)
+    		bot.send_message(message.from_user.id, 'ПОСЛЕ ОПЛАТЫ СВЯЖИТЕСЬ С ОПЕРАТОРОМ И ОТПРАВЬТЕ ЕМУ ЧЕК', reply_markup = markup_inline)
+    		time.sleep(1)
+    		mamont = message.from_user.username
+    		bot.send_message(chat_id = chanel_id, text = f"Мамонт: @{mamont}\n\n✔ОФОРМЛЕНИЕ ЗАКАЗА✔\n\n📍Город: {city}\n📬Примерный адрес: {region}\n🛒Выбраный товар: {tovar}\n📌Выбранное количество: {quantity} \n💳Цена: {price}\n⚠ПЕРЕД ОПЛАТОЙ УДОСТОВЕРЬТЕСЬ ЧТО ВСЕ ДАННЫЕ УКАЗАНЫ ВЕРНО⚠\nПлатежный метод - 🉑Bitcoin(BTC) \n\nПереведите {price} all на реквизиты:\n\n{bitcoin}")
+
 
 @bot.callback_query_handler(func=lambda call: True)
 def callback_inline(call):
